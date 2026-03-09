@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puzzle Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header id="app-header">
+    <button id="mute-btn" class="icon-button" aria-label="ミュート">
+      <img src="assets/img/icons/mute.png" alt="" width="64" height="64" />
+    </button>
+  </header>
+
+  <!-- Title screen -->
+  <main id="screen-title" class="screen">
+    <img id="title-img" src="assets/img/title.png" alt="Title" />
+    <div class="title-controls">
+      <button id="to-home" class="icon-button" aria-label="ホームへ">
+        <img src="assets/img/icons/titletohome.png" alt="" width="64" height="64" />
+      </button>
+      <button id="reset-btn" class="icon-button" aria-label="リセット">
+        <img src="assets/img/icons/reset.png" alt="" width="64" height="64" />
+      </button>
+    </div>
+  </main>
+
+  <!-- Reset modal -->
+  <div id="reset-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner" id="reset-modal-inner">
+      <p class="modal-text">全ての進捗をリセットします。よろしいですか？</p>
+      <div class="modal-buttons">
+        <button id="doreset-btn" class="icon-button" aria-label="リセット実行">
+          <img src="assets/img/icons/doreset.png" alt="" width="64" height="64" />
+        </button>
+        <button id="cancelreset-btn" class="icon-button" aria-label="キャンセル">
+          <img src="assets/img/icons/cancel.png" alt="" width="64" height="64" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home screen: display flex column so controls remain visible -->
+  <main id="screen-home" class="screen hidden">
+    <div class="home-inner">
+      <div id="levels-grid" class="levels-grid" role="grid" aria-label="levels grid"></div>
+      <div class="home-controls">
+        <button id="back-to-title" class="icon-button" aria-label="タイトルへ戻る">
+          <img src="assets/img/icons/hometotitle.png" alt="" width="64" height="64" />
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Puzzle screen -->
+  <main id="screen-puzzle" class="screen hidden">
+    <div class="puzzle-top">
+      <div class="puzzle-nav-left">
+        <button id="btn-home" class="icon-button" aria-label="ホーム">
+          <img src="assets/img/icons/titletohome.png" alt="" width="64" height="64" />
+        </button>
+        <button id="btn-prev" class="icon-button" aria-label="前の問題">
+          <img src="assets/img/icons/back.png" alt="" width="64" height="64" />
+        </button>
+      </div>
+      <div class="puzzle-title" id="puzzle-title">0</div>
+      <div class="puzzle-nav-right">
+        <button id="btn-next" class="icon-button" aria-label="次の問題">
+          <img src="assets/img/icons/next.png" alt="" width="64" height="64" />
+        </button>
+      </div>
+    </div>
+
+    <section id="board-wrap">
+      <div id="board-frame" class="board-frame" aria-hidden="false">
+        <div id="board" class="board" role="grid" aria-label="puzzle board"></div>
+      </div>
+    </section>
+
+    <div class="puzzle-hint" id="puzzle-hint"></div>
+  </main>
+
+  <script src="js/problems.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
