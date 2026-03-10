@@ -13,7 +13,7 @@
     </button>
   </header>
 
-  <!-- Title screen -->
+  <!-- タイトル画面 -->
   <main id="screen-title" class="screen">
     <img id="title-img" src="assets/img/title.png" alt="Title" />
     <div class="title-controls">
@@ -26,7 +26,7 @@
     </div>
   </main>
 
-  <!-- Reset modal -->
+  <!-- リセット確認モーダル -->
   <div id="reset-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-inner" id="reset-modal-inner">
       <p class="modal-text">全ての進捗をリセットします。よろしいですか？</p>
@@ -41,7 +41,19 @@
     </div>
   </div>
 
-  <!-- Home screen: display flex column so controls remain visible -->
+  <!-- 汎用情報モーダル（今回追加） -->
+  <div id="info-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-inner" id="info-modal-inner">
+      <p id="info-modal-text" class="modal-text"></p>
+      <div class="modal-buttons">
+        <button id="info-cancel-btn" class="icon-button" aria-label="閉じる">
+          <img src="assets/img/icons/cancel.png" alt="" width="64" height="64" />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ホーム画面 -->
   <main id="screen-home" class="screen hidden">
     <div class="home-inner">
       <div id="levels-grid" class="levels-grid" role="grid" aria-label="levels grid"></div>
@@ -53,7 +65,7 @@
     </div>
   </main>
 
-  <!-- Puzzle screen -->
+  <!-- パズル画面 -->
   <main id="screen-puzzle" class="screen hidden">
     <div class="puzzle-top">
       <div class="puzzle-nav-left">
