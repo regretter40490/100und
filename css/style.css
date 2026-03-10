@@ -8,7 +8,7 @@
   --frame-solved: #2f8f4c;
 }
 
-/* disable selection site-wide */
+/* disable selection */
 html, body, * { -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
 
 .hidden { display:none !important; }
@@ -26,13 +26,13 @@ header#app-header{position:fixed;right:12px;top:8px;z-index:60}
 #title-img{display:block;margin:0 auto;max-width:100%;height:auto}
 .title-controls{text-align:center;margin-top:18px;display:flex;gap:12px;justify-content:center;align-items:center}
 
-/* reset modal */
-.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:200}
+/* modal (shared) */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);z-index:400}
 .modal .modal-inner{background:#fff;padding:18px;border-radius:8px;max-width:90%;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
 .modal .modal-text{margin:0 0 12px;font-size:16px;color:#222}
 .modal .modal-buttons{display:flex;gap:12px;justify-content:center}
 
-/* Home screen: flex column so controls stay visible */
+/* Home layout */
 #screen-home .home-inner { display:flex; flex-direction:column; min-height:320px; }
 .levels-grid { display:grid; grid-template-columns:repeat(10,1fr); gap:8px; padding:12px; flex:1 1 auto; overflow:auto; }
 .home-controls { margin-top:auto; padding-top:12px; display:flex; gap:8px; align-items:center; }
